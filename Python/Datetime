@@ -1,0 +1,49 @@
+# Date Time[Python]
+--> Igor Mendes
+
+Biblioteca Responsavel por anipulação de Data e Hora
+    import datetime
+
+Padrão de impressão das datas:
+------------------------------
+|YYYY - MM - DD HH : MM : SS |
+------------------------------
+
+> A tipagem do arquivo data é proprio do tipo datea
+
+# Pegando o dia atual:
+    date = datetime.datetime.now()
+    print(date)
+
+# Pegando um Valor:
+    date.day    -> Retorna o dia
+    date.month  -> Retorna o mês
+    date.year   -> Retorna o ano
+    date.hour   -> Retorna o hora
+    date.minute -> Retorna o minuto
+    date.second -> Retorna o segundo
+
+# Criando uma Data:
+    nova_data = datetime.datetime(year,mont,day,hour,minute,seconds)
+
+# Modificando a formatação:
+    value = nova_data.strftime(*)
+
+> O elemento deve ser substituido no local do *
+
+    - "%A" -> Retorna o dia da Semana (Completo)
+    - "%a" -> Retorna o dia da Semana (Resumido)
+    - "%W" -> Retorna Numero do dia da Semana [Domingo = 0 | Sabado = 6]
+    - "%d" -> Retorna o dia do Mes 
+    - "%B" -> Retorna Nome do Mes (Completo)
+    - "%b" -> Retorna nome do Mes (Resumido)
+    - "%m" -> Retorna Numero do Mes
+    - "%y" -> Retorna Ano com 2 Digitos
+    - "%Y" -> Retorna Ano com 4 Digitos
+    - "%H" -> Retorna Retorna hora 24 H
+    - "%h" -> Retorna Retorna hora 12 H
+    - "%p" -> Retorna Returna AM/PM
+    - "%M" -> Retorna Retorna os Minutos
+    - "%S" -> Retorna Retorna os Segundos
+    - "%j" -> Retorna Retorna o dia no ano [001 -> 365]
+    - "%W" -> Retorna Numero da semana no Ano [01 -> 52]

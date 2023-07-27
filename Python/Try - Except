@@ -1,0 +1,117 @@
+# Try Except [Python]
+--> Igor Mendes
+
+# Definição:
+
+Em programação frequentemente temos Erros, em algumas situações não é vantajoso para nos que o Codigo inteiro seja parado por causa de apenas um Codigo, alem de as vezes podemos usar os Erros para auxiliar na nossa programação.
+Try - Except é uma ferramente que funciona em conjunto aonde o Try vai tentar executar os Codigos que estão dentro deles, em algum momento se por acaso ocorrer um Erro qualquer, O Programa interrompe toda a execução do Try e
+Exectura os que esta estão escrito no Except.
+
+
+- Exemplo:
+------------------------------
+
+try:
+    print(x)
+except:
+    print('x não foi defindo')
+
+
+> No exemplo, o programa esta tentando imprimir o valor de X na tela. Porem como não definimos X, ele então imprime a Mensagem que esta na escrita
+
+------------------------------
+
+
+# Else
+
+Assim como o If - Else, Try - Except posui um Else. Usamos esse Else para rodar codigo quando nenhum Erro foi encontrado
+
+Exemplo:
+------------------------------
+try:
+    print("Hello")
+except:
+    print("Alguma coisa deu Errado")
+else:
+    print("Nada deu Errado")
+
+> No exemplo, o progama tentarar imprimir "Hello", caso consiga ele tambem vai imprimir "Nada deu Errado". Caso haja um erro ele vai imprimir apenas "Alguma coisa deu Errado"
+------------------------------
+
+# Finally
+
+Finalmente temos o Finally, nesse caso utilizamos ele para casos quando queremos que um bloco de codigo execute uma função independente de se o codigo possui erro ou não.
+
+Exemplo:
+------------------------------
+try:
+    print(x)
+except:
+    print("Alguma coisa deu Errada")
+finally:
+    print("Finalizando o programa")
+
+> No Exemplo, o progama vai tentar imprimir x. caso não consiga ele vai imprimir "Alguma coisa deu Errada", mas não importanto o resultado do try-except sera imprimido "Finalizaqndo o programa"
+------------------------------
+
+# Tipos de Exceções: 
+
+De forma a melhorar o Programa, podemos Expecificar cada Erro e tratalos de uma forma diferente e separadamente de acordo com o nosso Problema.
+
+
+Exemplo:
+------------------------------
+
+try:
+    print(x)
+except NameError:
+    print('A Variavel x não foi defindo')
+except:
+    print("Ah algo de Errado no Progrma)
+
+
+> Nesse exemplo ele vai checar o X caso ele não seja Declarado ele vai entar no Primeiro Except e assim resolver o que esta dentro. Caso o Erro não seja de origem NameError ele vai imprimir "Ah algo de Errado no Programa"
+
+------------------------------
+
+Alguns Exemplos de Erros Comuns:
+
+    EOFError         -> Quando o input recebe a condição end-of-file 
+    IndexError       -> O index esta fora de Renge
+    NameError        -> A Variavel não foi encontrada no Escopo geral
+    ValueError       -> Quando uma função recebe um argumento do tipo correto mas com um Valor inapropriado
+    ZeroDivisinError -> Quando dividimos por Zero
+    KeyError         -> Não foi encontrado a Key no Dictionaruy
+
+
+> Existem mais Erros mas outros são mais especificos e ou não costumam aparecer ocm tanta frequencia. Vale porem dar uma analisada
+
+
+# Raise an Exception
+
+Nem todos os erros são classificados em nossa tabela. As vezes alguns situações são tão especificas que precisamos criar uma Excessão. Para isso tempos o comando raise sempre que uma 
+situação aocntecer ele ira gerar um Erro. 
+
+Exemplo:
+------------------------------
+
+x = -1
+
+if x < 0:
+    raise Exception("Não é permitidos numeros abaixo de 0)
+
+------------------------------
+
+
+Podemos inclusive, definir qual tipo de Erro queremos Gerar.
+
+Exemplo:
+------------------------------
+
+x = "Hello"
+
+if not type(x) is int:
+    raise TypeError("Apenas Int são permitidos)
+
+------------------------------
+
